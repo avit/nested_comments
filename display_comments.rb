@@ -1,4 +1,4 @@
-require "./do_not_peek_behind_the_curtain/bad_code"
+require "./nested_comments"
 
 Comment  = Struct.new(:id, :parent_id, :nesting)
 comments = [
@@ -17,7 +17,7 @@ comments = [
   [13, 8,   "0005.0006"],
 ].map { |args| Comment.new(*args) }
 
-BadCode.show_expected_results(comments)
+NestedComments.show_expected_results(comments)
 # >> <ul>
 # >>   <li>0001</li>
 # >>   <li>0002
